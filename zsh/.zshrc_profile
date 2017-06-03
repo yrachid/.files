@@ -14,3 +14,5 @@ function current_branch() {
 }
 
 export PS1=$'\e[32m(%*, %~)($(current_branch)) => \e[0m'
+
+setopt promptsubst
