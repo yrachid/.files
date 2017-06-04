@@ -8,3 +8,5 @@ touch $HOME/.zshrc
 
 echo "source $HOME/.othman853/.dotfiles/.zshrc_profile" >> $HOME/.zshrc
 echo "source $HOME/.othman853/.dotfiles/.zshrc_alias" >> $HOME/.zshrc
+
+source $HOME/.zshrc
