@@ -10,9 +10,9 @@ function get_branch_name() {
 }
 
 function current_branch() {
-  if is_git_repository; then echo $(get_branch_name); else echo ""; fi
+  if is_git_repository; then echo " ($(get_branch_name))"; else echo ""; fi
 }
 
-export PS1=$'\e[32m(%*, %~)($(current_branch)) => \e[0m'
+export PS1=$'\e[38;5;214m(%~)$(current_branch) => '
 
 setopt promptsubst
