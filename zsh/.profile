@@ -16,3 +16,4 @@ function current_branch() {
 export PS1=$'\e[38;5;214m(%~)$(current_branch) => '
 
 setopt promptsubst
+setopt inc_append_history
