@@ -2,19 +2,26 @@
 
 REMOTE_PATH=https://raw.githubusercontent.com/othman853/dotfiles/master/zsh
 LOCAL_PATH=$HOME/.othman853/dotfiles/zsh
+Z_PATH=$HOME/.zshrc
+declare -a DOTFILES=(.profile .alias .env)
 
 function fetch_from_remote() {
   curl --silent $REMOTE_PATH/$1  > $LOCAL_PATH/$1
 }
 
-declare -a DOTFILES=(.profile .alias .env)
+function clean_local_wspace() {
+  rm -rf $LOCAL_PATH
+  mkdir -p $LOCAL_PATH
+  rm -f $ZPATH
+}
 
-mkdir -p $LOCAL_PATH
-rm -f $HOME/.zshrc
-touch $HOME/.zshrc
+function create_zshrc() {
+  clean_local_wspace
+  for dotfile in "${DOTFILES[@]}"
+  do
+    fetch_from_remote $dotfile
+    echo "source $LOCAL_PATH/$dotfile" >> $Z_PATH
+  done
+}
 
-for dotfile in "${DOTFILES[@]}"
-do
-  fetch_from_remote $dotfile
-  echo "source $LOCAL_PATH/$dotfile" >> $HOME/.zshrc
-done
+create_zshrc
