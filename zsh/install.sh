@@ -3,7 +3,7 @@
 REMOTE_PATH=https://raw.githubusercontent.com/othman853/dotfiles/master/zsh
 LOCAL_PATH=$HOME/.othman853/dotfiles/zsh
 Z_PATH=$HOME/.zshrc
-declare -a DOTFILES=(.profile .alias .env)
+DOTFILES=(.profile .alias .env)
 
 function fetch_from_remote() {
   curl --silent $REMOTE_PATH/$1  > $LOCAL_PATH/$1
