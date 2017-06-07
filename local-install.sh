@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REMOTE_PATH=$PWD
-LOCAL_PATH=$HOME/.othman853/dotfiles/zsh
+LOCAL_PATH=$HOME/.othman853/dotfiles
 Z_PATH=$HOME/.zshrc
 DOTFILES=(.profile .alias .env)
 
@@ -24,6 +24,6 @@ function create_zshrc() {
 }
 
 clean_local_wspace
-chmod +x ./git/git-prompt.sh
-cp -R ./git $HOME/.othman853/dotfiles
+chmod +x ./git-prompt.sh
+cp ./git-prompt.sh $HOME/.othman853/dotfiles
 create_zshrc
