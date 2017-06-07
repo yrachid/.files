@@ -1,3 +1,6 @@
 alias sl="ls"
 alias ll="ls -la"
 alias l="ls -la"
+
+alias t="todolist"
+alias tl="todolist l by p"
