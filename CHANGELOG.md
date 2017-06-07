@@ -1,6 +1,10 @@
 # Changelog
 
-Current version: 0.1.1
+Current version: 0.1.2
+
+## [0.1.2] - 2017-06-07
+### Fixed
+- Git status on PS1 inside all project folders (not only the root folder of a repository)
 
 ## [0.1.1] - 2017-06-06
 ### Added
