@@ -1,6 +1,7 @@
-alias sl="ls"
-alias ll="ls -la"
-alias l="ls -la"
+
+alias sl="ls -G"
+alias ll="ls -laG"
+alias l="ls -lG"
 
 alias t="todolist"
 alias tl="todolist l by p"
