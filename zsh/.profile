@@ -1,3 +1,6 @@
+autoload -U compinit && compinit
+zmodload -i zsh/complist
+
 . $HOME/.othman853/dotfiles/git/git-prompt.sh
 
 export GIT_PS1_SHOWDIRTYSTATE=1

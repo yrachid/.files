@@ -1,6 +1,11 @@
 # Changelog
 
-Current version: 0.1.2
+Current version: 0.1.3
+
+## [0.1.3] - 2017-06-07
+### Added
+- Git auto completion from ZSH's standard autocomp libs
+- local-install.sh script to install zsh config from cloned repository (useful for development tests)
 
 ## [0.1.2] - 2017-06-07
 ### Fixed
