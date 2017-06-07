@@ -13,7 +13,7 @@ function current_branch() {
   if is_git_repository; then echo " ($(get_branch_name))"; else echo ""; fi
 }
 
-export PS1=$'\e[38;5;214m(%~)$(current_branch) => '
+export PS1=$'\e[38;5;214m(%~)$(current_branch) =>\e[0m '
 
 setopt promptsubst
 setopt inc_append_history
