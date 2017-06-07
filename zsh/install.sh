@@ -16,7 +16,6 @@ function clean_local_wspace() {
 }
 
 function create_zshrc() {
-  clean_local_wspace
   for dotfile in "${DOTFILES[@]}"
   do
     fetch_from_remote $dotfile
@@ -24,4 +23,7 @@ function create_zshrc() {
   done
 }
 
+clean_local_wspace
+chmod +x ./git/git-prompt.sh
+cp -R ./git $HOME/.othman853/dotfiles
 create_zshrc
