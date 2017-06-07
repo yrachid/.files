@@ -3,7 +3,7 @@
 REMOTE_PATH=$PWD
 LOCAL_PATH=$HOME/.othman853/dotfiles
 Z_PATH=$HOME/.zshrc
-DOTFILES=(.profile .alias .env)
+DOTFILES=(.profile .alias .env .secrets)
 
 function fetch_from_remote() {
   cp $REMOTE_PATH/$1 $LOCAL_PATH/$1

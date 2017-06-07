@@ -1,16 +1,19 @@
 # Changelog
 
-Current version: 0.1.4
+Current version: 0.1.5
+
+## [0.1.5] - 2017-06-07
+### Added
+- .secrets file
 
 ## [0.1.4] - 2017-06-07
 ### Added
 - Vim config
 - One level only directory structure
 
-
 ## [0.1.3] - 2017-06-07
 ### Added
-- Git auto completion from ZSH's standard autocomp libs
+- Git auto completion from ZSHs standard autocomp libs
 - local-install.sh script to install zsh config from cloned repository (useful for development tests)
 
 ## [0.1.2] - 2017-06-07
