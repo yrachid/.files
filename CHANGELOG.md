@@ -1,6 +1,12 @@
 # Changelog
 
-Current version: 0.1.3
+Current version: 0.1.4
+
+## [0.1.4] - 2017-06-07
+### Added
+- Vim config
+- One level only directory structure
+
 
 ## [0.1.3] - 2017-06-07
 ### Added

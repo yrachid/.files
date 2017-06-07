@@ -15,6 +15,15 @@ function clean_local_wspace() {
   rm -f $ZPATH
 }
 
+function install_git_scripts() {
+  chmod +x ./git-prompt.sh
+  cp ./git-prompt.sh $HOME/.othman853/dotfiles
+}
+
+function install_vim_config() {
+ cp ./.vimrc $HOME
+} 
+
 function create_zshrc() {
   for dotfile in "${DOTFILES[@]}"
   do
@@ -24,6 +33,6 @@ function create_zshrc() {
 }
 
 clean_local_wspace
-chmod +x ./git-prompt.sh
-cp ./git-prompt.sh $HOME/.othman853/dotfiles
+install_git_scripts
+install_vim_config
 create_zshrc
