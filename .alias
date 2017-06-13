@@ -7,4 +7,5 @@ alias tree="tree -a -I .git"
 alias t="todolist"
 alias tl="todolist l by p"
 
-alias notes="cd ~/.othman853/dotfiles/.notes; ls -la"
+alias vim="/usr/local/Cellar/vim/8.0.0636/bin/vim"
+

@@ -1,4 +1,6 @@
-syntax on
+set nocompatible
 set number
+syntax on
 set list
-set listchars=eol:$,tab:>-,trail:~,extends:>,preceds:<
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
