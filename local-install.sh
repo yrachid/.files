@@ -4,7 +4,7 @@ REMOTE_PATH=$PWD
 LOCAL_PATH=$HOME/.othman853/dotfiles
 Z_PATH=$HOME/.zshrc
 DOTFILES=(.profile .alias .env .secrets)
-DOTFOLDERS=(.notes)
+DOTFOLDERS=(.notes .scripts)
 
 function install_dotfile() {
   cp $REMOTE_PATH/$1 $LOCAL_PATH/$1

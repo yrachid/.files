@@ -1,6 +1,10 @@
 # Changelog
 
-Current version: 0.1.6
+Current version: 0.1.7
+
+## [0.1.7] - 2017-06-12
+### Added
+- .scripts folder
 
 ## [0.1.6] - 2017-06-12
 ### Added
