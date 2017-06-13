@@ -1,12 +1,13 @@
 #!/bin/bash
 
-REMOTE_PATH=https://raw.githubusercontent.com/othman853/dotfiles/master/zsh
-LOCAL_PATH=$HOME/.othman853/dotfiles/zsh
+REMOTE_PATH=$PWD
+LOCAL_PATH=$HOME/.othman853/dotfiles
 Z_PATH=$HOME/.zshrc
-DOTFILES=(.profile .alias .env)
+DOTFILES=(.profile .alias .env .secrets)
+DOTFOLDERS=(.notes .scripts)
 
-function fetch_from_remote() {
-  curl --silent $REMOTE_PATH/$1  > $LOCAL_PATH/$1
+function install_dotfile() {
+  cp $REMOTE_PATH/$1 $LOCAL_PATH/$1
 }
 
 function clean_local_wspace() {
@@ -15,15 +16,32 @@ function clean_local_wspace() {
   rm -f $ZPATH
 }
 
+function install_git_scripts() {
+  chmod +x ./git-prompt.sh
+  cp ./git-prompt.sh $LOCAL_PATH
+}
+
+function install_vim_config() {
+ cp ./.vimrc $HOME
+} 
+
+function install_folders() {
+  for folder in "${DOTFOLDERS[@]}"
+  do
+    mkdir -p $LOCAL_PATH/$folder
+  done
+}
+
 function create_zshrc() {
   for dotfile in "${DOTFILES[@]}"
   do
-    fetch_from_remote $dotfile
+    install_dotfile $dotfile
     echo "source $LOCAL_PATH/$dotfile" >> $Z_PATH
   done
 }
 
 clean_local_wspace
-chmod +x ./git/git-prompt.sh
-cp -R ./git $HOME/.othman853/dotfiles
+install_folders
+install_git_scripts
+install_vim_config
 create_zshrc
