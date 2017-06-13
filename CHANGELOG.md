@@ -1,6 +1,10 @@
 # Changelog
 
-Current version: 0.1.8
+Current version: 0.1.9
+
+## [0.1.9] - 2017-06-12
+### Fixed
+- Dont set `.scripts` on `PATH` if its already there
 
 ## [0.1.8] - 2017-06-12
 ### Fixed
