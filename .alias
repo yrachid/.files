@@ -2,6 +2,7 @@
 alias sl="ls -G"
 alias ll="ls -laG"
 alias l="ls -lG"
+alias tree="tree -a -I .git"
 
 alias t="todolist"
 alias tl="todolist l by p"
