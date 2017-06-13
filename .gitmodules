@@ -1,0 +1,31 @@
+[submodule "bundle/vim-pathogen"]
+	path = bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/dockerfile"]
+	path = bundle/dockerfile
+	url = https://github.com/chr4/dockerfile.vim.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "bundle/vim-tabular"]
+	path = bundle/vim-tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "bundle/vim-javascript"]
+	path = bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+
