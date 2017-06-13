@@ -1,6 +1,10 @@
 # Changelog
 
-Current version: 0.1.5
+Current version: 0.1.6
+
+## [0.1.6] - 2017-06-12
+### Added
+- .notes folder
 
 ## [0.1.5] - 2017-06-07
 ### Added

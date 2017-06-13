@@ -5,3 +5,5 @@ alias l="ls -lG"
 
 alias t="todolist"
 alias tl="todolist l by p"
+
+alias notes="cd ~/othman853/dotfiles/notes; ls -la"
