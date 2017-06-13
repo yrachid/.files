@@ -1,6 +1,10 @@
 # Changelog
 
-Current version: 0.1.7
+Current version: 0.1.8
+
+## [0.1.8] - 2017-06-12
+### Fixed
+- Wrong var name breaking folder creation
 
 ## [0.1.7] - 2017-06-12
 ### Added

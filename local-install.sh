@@ -28,7 +28,7 @@ function install_vim_config() {
 function install_folders() {
   for folder in "${DOTFOLDERS[@]}"
   do
-    mkdir -p $LOCALPATH/$folder
+    mkdir -p $LOCAL_PATH/$folder
   done
 }
 
