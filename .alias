@@ -4,6 +4,9 @@ alias ll="ls -laG"
 alias l="ls -lG"
 alias tree="tree -a -I .git"
 
+alias gs="git status"
+alias gl="git log"
+
 alias t="todolist"
 alias tl="todolist l by p"
 

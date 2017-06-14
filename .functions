@@ -5,3 +5,7 @@ function ta() {
 function tc() {
   tmux new -s $1
 }
+
+function commit() {
+  git commit -S -m $@
+}
