@@ -1,0 +1,26 @@
+#!/bin/bash
+
+function content_after_last_slash() {
+  URL=$1
+  echo ${URL##*/}
+}
+
+if [ ! -z "$1"  ]; then
+
+  PLUGIN_REPO=$1
+  PLUGIN_NAME=$(content_after_last_slash $PLUGIN_REPO | sed 's/\.git//')
+
+  git submodule add $PLUGIN_REPO $HOME/.vim/bundle/$PLUGIN_NAME
+
+  read -p "Commit new plugin? (y/n)" -n 1 -r
+
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    git add .
+    git commit -m "Adding vim $PLUGIN_NAME plugin"
+    git push origin master
+  fi
+
+else
+  echo "You forgot the plugin url."
+fi
+
