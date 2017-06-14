@@ -4,6 +4,7 @@ set list
 set listchars=tab:»·,trail:·
 set ruler
 set tabstop=4
+set shiftwidth=4
 set backspace=indent,eol,start
 set rulerformat=%55(%{strftime('%d-%m-%Y\ %H:%M:%S\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 
