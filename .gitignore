@@ -1,3 +1,4 @@
 *.swp
 *.private
 .notes
+.vim/.netrwhist
