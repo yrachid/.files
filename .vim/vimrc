@@ -7,12 +7,15 @@ set tabstop=4
 set shiftwidth=4
 set backspace=indent,eol,start
 set rulerformat=%55(%{strftime('%d-%m-%Y\ %H:%M:%S\ %p')}\ %5l,%-6(%c%V%)\ %P%)
-
-let NERDTreeShowHidden=1
-
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 syntax on
 
+let NERDTreeShowHidden=1
+let g:ctrlp_map='<c-p>'
+
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+
 call pathogen#infect()
 
 autocmd VimEnter * NERDTree
