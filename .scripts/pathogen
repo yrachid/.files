@@ -13,6 +13,7 @@ if [ ! -z "$1"  ]; then
   git submodule add $PLUGIN_REPO $HOME/.vim/bundle/$PLUGIN_NAME
 
   read -p "Commit new plugin? (y/n)" -n 1 -r
+  echo ""
 
   if [[ $REPLY =~ ^[Yy]$ ]]; then
     git add .
