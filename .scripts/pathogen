@@ -10,7 +10,7 @@ if [ ! -z "$1"  ]; then
   PLUGIN_REPO=$1
   PLUGIN_NAME=$(content_after_last_slash $PLUGIN_REPO | sed 's/\.git//')
 
-  git submodule add $PLUGIN_REPO $HOME/.vim/bundle/$PLUGIN_NAME
+  git submodule add -f $PLUGIN_REPO $HOME/.othman853/.vim/bundle/$PLUGIN_NAME
 
   read -p "Commit new plugin? (y/n)" -n 1 -r
   echo ""

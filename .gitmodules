@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/vim-snippets"]
 	path = .vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "/Users/conference/.othman853/.vim/bundle/vim-vue"]
+	path = /Users/conference/.othman853/.vim/bundle/vim-vue
+	url = https://github.com/posva/vim-vue.git
