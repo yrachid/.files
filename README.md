@@ -10,9 +10,11 @@ Apply my terminal emulator and VIM settings as smooth as possible regardless of 
 
 ### ZSH
 
+``` bash
 git clone https://github.com/othman853/dotfiles.git ~/.othman853
 
 bash install.sh
+```
 
 ### Bash: Work In Progress
 
