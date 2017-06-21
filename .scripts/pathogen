@@ -1,7 +1,5 @@
 #!/bin/bash
 
-BUNDLE_PATH=$HOME/.othman853/.vim/bundle
-
 function content_after_last_slash() {
   URL=$1
   echo ${URL##*/}
@@ -9,12 +7,12 @@ function content_after_last_slash() {
 
 if [ ! -z "$1"  ]; then
 
-  cd $BUNDLE_PATH
+  cd $HOME/.othman853
 
   PLUGIN_REPO=$1
   PLUGIN_NAME=$(content_after_last_slash $PLUGIN_REPO | sed 's/\.git//')
 
-  git submodule add -f $PLUGIN_REPO $BUNDLE_PATH/$PLUGIN_NAME
+  git submodule add -f $PLUGIN_REPO .vim/bundle/$PLUGIN_NAME
 
   read -p "Commit new plugin? (y/n)" -n 1 -r
   echo ""
