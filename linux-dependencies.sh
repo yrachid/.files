@@ -1,1 +1,1 @@
-sudo apt install -y curl git
+sudo apt install -y curl xsel xclip
