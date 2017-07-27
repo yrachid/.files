@@ -2,7 +2,7 @@
 "                                         GENERAL CONFIG
 "==================================================================================================
 
-"Disable -C flag and reset system wide configuration. Better safe than sorry
+"Disable -C flag and reset system wide configuration. Better safe than sorry.
 set nocompatible
 
 "Show line numbers
@@ -14,6 +14,16 @@ syntax on
 "Let Vim guess file types, adjust auto-indenting accordingly and enable plugins that are file-type
 " specific.
 filetype indent plugin on
+"==================================================================================================
+
+
+"==================================================================================================
+"                                         PATHOGEN
+"==================================================================================================
+
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
+call pathogen#infect()
 "==================================================================================================
 
 
@@ -58,11 +68,11 @@ set rulerformat=%55(%{strftime('%d-%m-%Y\ %H:%M:%S\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 "Column limit to 100
 set cc=100
 
-"Create regex patter for column overlength when line reachs column 101
-match OverLength /\%101v.\+/
-
 "Higlights pieces of line that match overlength regex
 highlight OverLength ctermbg=cyan ctermfg=black guibg=#C92D2D
+
+"Create regex pattern for column overlength when line reachs column 101
+match OverLength /\%101v.\+/
 "==================================================================================================
 
 
@@ -83,16 +93,4 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 "Set ctrlp to ignore some undesired files and folders
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
-"==================================================================================================
-
-
-"==================================================================================================
-"                                         PATHOGEN
-"==================================================================================================
-
-"Load Pathogen startup
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-
-"Let pathogen do its job
-call pathogen#infect()
 "==================================================================================================
