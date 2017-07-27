@@ -5,25 +5,38 @@ function content_after_last_slash() {
   echo ${URL##*/}
 }
 
-if [ ! -z "$1"  ]; then
+function install_plugin() {
+  if [ ! -z "$1"  ]; then
+    cd $HOME/.othman853
 
-  cd $HOME/.othman853
+    PLUGIN_REPO=$1
+    PLUGIN_NAME=$(content_after_last_slash $PLUGIN_REPO | sed 's/\.git//')
 
-  PLUGIN_REPO=$1
-  PLUGIN_NAME=$(content_after_last_slash $PLUGIN_REPO | sed 's/\.git//')
+    git submodule add -f $PLUGIN_REPO .vim/bundle/$PLUGIN_NAME
 
-  git submodule add -f $PLUGIN_REPO .vim/bundle/$PLUGIN_NAME
+    read -p "Commit new plugin? (y/n)" -n 1 -r
+    echo ""
 
-  read -p "Commit new plugin? (y/n)" -n 1 -r
-  echo ""
-
-  if [[ $REPLY =~ ^[Yy]$ ]]; then
-    git add .
-    git commit -m "Adding $PLUGIN_NAME plugin to vim"
-    git push origin master
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+      git add .
+      git commit -m "Adding $PLUGIN_NAME plugin to vim"
+      git push origin master
+    fi
+  else
+    echo "You forgot the plugin url."
   fi
+}
 
-else
-  echo "You forgot the plugin url."
-fi
+OPERATION=$1
+
+case $OPERATION in
+  install)
+    install_plugin $2
+    ;;
+  *)
+    echo "Invalid operation $OPERATION"
+    echo "Available options are: install"
+    exit 1
+    ;;
+esac
 
