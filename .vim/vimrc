@@ -1,7 +1,7 @@
 set nocompatible
 set number
 set list
-set listchars=tab:»·,trail:·
+set listchars=tab:>-,trail:-
 set ruler
 set tabstop=2
 set shiftwidth=2
@@ -10,8 +10,12 @@ set backspace=indent,eol,start
 set rulerformat=%55(%{strftime('%d-%m-%Y\ %H:%M:%S\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+set cc=100
 
 syntax on
+
+highlight OverLength ctermbg=cyan ctermfg=black guibg=#C92D2D
+match OverLength /\%101v.\+/
 
 let NERDTreeShowHidden=1
 let g:ctrlp_map='<c-p>'
