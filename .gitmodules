@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/nova-vim"]
 	path = .vim/bundle/nova-vim
 	url = https://github.com/trevordmiller/nova-vim
+[submodule ".vim/bundle/vim-colorschemes"]
+	path = .vim/bundle/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
