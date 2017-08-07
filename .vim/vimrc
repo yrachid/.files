@@ -15,6 +15,9 @@ syntax on
 " specific.
 filetype indent plugin on
 
+"A color scheme that does not burn the eyes so much.
+colorscheme desert
+
 "==================================================================================================
 "PATHOGEN
 "==================================================================================================
