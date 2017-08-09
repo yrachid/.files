@@ -85,7 +85,7 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_map = '<c-p>'
 
 "Map ctrl + [ to toggle nerdtree
-silent! nmap <C-[> :NERDTreeToggle<CR>
+silent! nmap <F3> :NERDTreeToggle<CR>
 
 "Set ctrlp on vim's runpath
 set runtimepath^=~/.vim/bundle/ctrlp.vim

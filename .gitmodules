@@ -7,9 +7,6 @@
 [submodule ".vim/bundle/vim-gitgutter"]
 	path = .vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-[submodule ".vim/bundle/tern_for_vim"]
-	path = .vim/bundle/tern_for_vim
-	url = https://github.com/ternjs/tern_for_vim
 [submodule ".vim/bundle/tlib_vim"]
 	path = .vim/bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
