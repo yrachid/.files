@@ -1,30 +1,81 @@
 #!/bin/bash
 
-function content_after_last_slash() {
+PLUGIN_DIRECTORY=$HOME/.vim/bundle
+
+content_after_last_slash() {
   URL=$1
   echo ${URL##*/}
 }
 
-function install_plugin() {
+plugin_name() {
+  echo "$(content_after_last_slash $1 | sed 's/\.git//')"
+}
+
+plugin_location() {
+  echo "$PLUGIN_DIRECTORY/$(plugin_name $1)"
+}
+
+install_plugin() {
   if [ ! -z "$1"  ]; then
     cd $HOME/.othman853
 
     PLUGIN_REPO=$1
-    PLUGIN_NAME=$(content_after_last_slash $PLUGIN_REPO | sed 's/\.git//')
 
-    git submodule add -f $PLUGIN_REPO .vim/bundle/$PLUGIN_NAME
+    #git submodule add -f $PLUGIN_REPO plugin_location $PLUGIN_REPO
+
+    echo $PLUGIN_REPO
+    echo "$(plugin_location $PLUGIN_REPO)"
 
     read -p "Commit new plugin? (y/n)" -n 1 -r
     echo ""
 
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-      git add .
-      git commit -m "Adding $PLUGIN_NAME plugin to vim"
-      git push origin master
+      #git add .
+      #git commit -m "[VIM] Adding new plugin: $(plugin_name $PLUGIN_REPO)"
+      echo "[VIM] Adding new plugin: $(plugin_name $PLUGIN_REPO)"
+      #git push origin master
     fi
   else
     echo "You forgot the plugin url."
   fi
+}
+
+remove_plugin() {
+  if [ ! -z "$1" ];then
+    initial_line_number=$(grep -n "\[submodule \".vim/bundle/$1\"\]" $HOME/.othman853/.gitmodules.test | cut -f1 -d: | head -n 1)
+    ending_line_number=$((initial_line_number+2))
+
+    sed "$initial_line_number,${ending_line_number}d" $HOME/.othman853/.gitmodules.test > .gitmodules.temp
+
+    echo ".gitmodules diff:"
+    diff .gitmodules .gitmodules.temp
+
+    read -p "Remove plugin? (y/n)" -n 1 -r
+    echo ""
+
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+      rm -rf $(plugin_location $1)
+      cat .gitmodules.temp > .gitmodules
+
+      read -p "Commit removal? (y/n)" -n 1 -r
+      echo ""
+
+      if [[ $REPLY =~ ^[Yy]$ ]]; then
+        git add .gitmodules
+        git add $HOME/.othman853/.vim/bundle
+        git commit -m "[VIM] Remove plugin $1"
+      fi
+    fi
+
+    rm .gitmodules.temp
+
+  else
+    echo "Plugin not specified or not found $1"
+  fi
+}
+
+list_plugins() {
+  ls -1 $PLUGIN_DIRECTORY
 }
 
 OPERATION=$1
@@ -33,9 +84,15 @@ case $OPERATION in
   install)
     install_plugin $2
     ;;
+  remove)
+    remove_plugin $2
+    ;;
+  list)
+    list_plugins
+    ;;
   *)
     echo "Invalid operation $OPERATION"
-    echo "Available options are: install"
+    echo "Available options are: install, remove, list"
     exit 1
     ;;
 esac
