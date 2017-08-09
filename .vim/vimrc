@@ -18,6 +18,8 @@ filetype indent plugin on
 "A color scheme that does not burn the eyes so much.
 colorscheme desert
 
+set textwidth=100
+
 "==================================================================================================
 "PATHOGEN
 "==================================================================================================
@@ -81,6 +83,9 @@ let g:ctrlp_show_hidden = 1
 
 "Allow ctrlp to be invoked with CTRL + P
 let g:ctrlp_map = '<c-p>'
+
+"Map ctrl + [ to toggle nerdtree
+silent! nmap <C-[> :NERDTreeToggle<CR>
 
 "Set ctrlp on vim's runpath
 set runtimepath^=~/.vim/bundle/ctrlp.vim
