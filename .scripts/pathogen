@@ -45,7 +45,7 @@ remove_plugin() {
     initial_line_number=$(grep -n "\[submodule \".vim/bundle/$1\"\]" $HOME/.othman853/.gitmodules.test | cut -f1 -d: | head -n 1)
     ending_line_number=$((initial_line_number+2))
 
-    sed "$initial_line_number,${ending_line_number}d" $HOME/.othman853/.gitmodules.test > .gitmodules.temp
+    sed "$initial_line_number,${ending_line_number}d" $HOME/.othman853/.gitmodules > .gitmodules.temp
 
     echo ".gitmodules diff:"
     diff .gitmodules .gitmodules.temp
