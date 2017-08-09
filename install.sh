@@ -1,9 +1,8 @@
 #!/bin/bash
 
 function generate_folders() {
-  ln -s $HOME/.othman853/.vim ~/.vim
-  mkdir -p $HOME/.othman853/.scripts
-  mkdir -p $HOME/.othman853/.notes
+  ln -s $HOME/.othman853/vim ~/.vim
+  mkdir -p $HOME/.othman853/scripts
   git submodule update --init
 }
 
@@ -11,11 +10,11 @@ SHELL_TYPE=$1
 
 case $SHELL_TYPE in
   bash)
-    ln -s $HOME/.othman853/.bashrc ~/.bashrc
+    ln -s $HOME/.othman853/bashrc ~/.bashrc
     # generate_folders
   ;;
   zsh)
-    ln -s $HOME/.othman853/.zshrc ~/.zshrc
+    ln -s $HOME/.othman853/zshrc ~/.zshrc
     # generate_folders
   ;;
   *)
@@ -26,8 +25,7 @@ case $SHELL_TYPE in
   ;;
 esac
 
-  ln -s $HOME/.othman853/.vim ~/.vim
-  mkdir -p $HOME/.othman853/.scripts
-  mkdir -p $HOME/.othman853/.notes
+  ln -s $HOME/.othman853/vim ~/.vim
+  mkdir -p $HOME/.othman853/scripts
   git submodule update --init
 

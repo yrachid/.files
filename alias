@@ -1,0 +1,16 @@
+
+alias sl="ls -G"
+alias ll="ls -laG"
+alias l="ls -lG"
+alias tree="tree -a -I .git"
+alias ws="cd ~/wspace"
+alias gs="git status"
+alias gl="git log"
+alias keys="gpg --list-secret-keys --keyid-format LONG"
+alias t="todolist"
+alias tl="todolist l by p"
+
+alias tls="tmux ls"
+
+alias ss="source ~/.zshrc"
+alias gi="vim .gitignore"

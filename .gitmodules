@@ -1,27 +1,27 @@
-[submodule ".vim/bundle/vim-pathogen"]
-	path = .vim/bundle/vim-pathogen
+[submodule "vim/bundle/vim-pathogen"]
+	path = vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/vim-gitgutter"]
-	path = .vim/bundle/vim-gitgutter
+[submodule "vim/bundle/vim-gitgutter"]
+	path = vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-[submodule ".vim/bundle/tlib_vim"]
-	path = .vim/bundle/tlib_vim
+[submodule "vim/bundle/tlib_vim"]
+	path = vim/bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
-[submodule ".vim/bundle/vim-addon-mw-utils"]
-	path = .vim/bundle/vim-addon-mw-utils
+[submodule "vim/bundle/vim-addon-mw-utils"]
+	path = vim/bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule ".vim/bundle/vim-snipmate"]
-	path = .vim/bundle/vim-snipmate
+[submodule "vim/bundle/vim-snipmate"]
+	path = vim/bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
-[submodule ".vim/bundle/vim-vue"]
-	path = .vim/bundle/vim-vue
+[submodule "vim/bundle/vim-vue"]
+	path = vim/bundle/vim-vue
 	url = https://github.com/posva/vim-vue.git
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule ".vim/bundle/vim-javascript"]
-	path = .vim/bundle/vim-javascript
+[submodule "vim/bundle/vim-javascript"]
+	path = vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
