@@ -42,10 +42,13 @@ install_plugin() {
 
 remove_plugin() {
   if [ ! -z "$1" ];then
-    initial_line_number=$(grep -n "\[submodule \".vim/bundle/$1\"\]" $HOME/.othman853/.gitmodules | cut -f1 -d: | head -n 1)
+
+    cd $HOME/.othman853/
+
+    initial_line_number=$(grep -n "\[submodule \".vim/bundle/$1\"\]" .gitmodules | cut -f1 -d: | head -n 1)
     ending_line_number=$((initial_line_number+2))
 
-    sed "$initial_line_number,${ending_line_number}d" $HOME/.othman853/.gitmodules > .gitmodules.temp
+    sed "$initial_line_number,${ending_line_number}d" .gitmodules > .gitmodules.temp
 
     echo ".gitmodules diff:"
     diff .gitmodules .gitmodules.temp
@@ -62,7 +65,7 @@ remove_plugin() {
 
       if [[ $REPLY =~ ^[Yy]$ ]]; then
         git add .gitmodules
-        git add $HOME/.othman853/.vim/bundle
+        git add .vim/bundle
         git commit -m "[VIM] Remove plugin $1"
       fi
     fi
