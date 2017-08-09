@@ -1,21 +1,13 @@
 #!/bin/bash
 
-function generate_folders() {
-  ln -s $HOME/.othman853/vim ~/.vim
-  mkdir -p $HOME/.othman853/scripts
-  git submodule update --init
-}
-
 SHELL_TYPE=$1
 
 case $SHELL_TYPE in
   bash)
     ln -s $HOME/.othman853/bashrc ~/.bashrc
-    # generate_folders
   ;;
   zsh)
     ln -s $HOME/.othman853/zshrc ~/.zshrc
-    # generate_folders
   ;;
   *)
     echo "Invalid shell type $SHELL_TYPE"
@@ -25,7 +17,6 @@ case $SHELL_TYPE in
   ;;
 esac
 
-  ln -s $HOME/.othman853/vim ~/.vim
-  mkdir -p $HOME/.othman853/scripts
-  git submodule update --init
+ln -s $HOME/.othman853/vim ~/.vim
+git submodule update --init
 
