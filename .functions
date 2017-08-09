@@ -12,7 +12,7 @@ tk() {
   tmux kill-session -t $1
 }
 
-tr() {
+trc() {
   tk $1
   tc $1
 }
