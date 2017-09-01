@@ -1,0 +1,22 @@
+snippet main
+	if __name__ == '__main__':
+		${1}
+snippet cl
+	class ${1}:
+		def __init__(self):
+			pass
+			${22}
+snippet def
+	def ${1}():
+		pass
+snippet te
+	def test_${1}():
+		pass
+snippet map
+	map(lambda ${1})
+snippet ml
+	= list(map(lambda ${1}))
+snippet filter
+	filter(lambda ${1})
+snippet fl
+	list(filter(lambda ${1}))
