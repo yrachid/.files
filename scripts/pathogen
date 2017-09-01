@@ -21,19 +21,14 @@ install_plugin() {
 
     PLUGIN_REPO=$1
 
-    #git submodule add -f $PLUGIN_REPO plugin_location $PLUGIN_REPO
-
-    echo $PLUGIN_REPO
-    echo "$(plugin_location $PLUGIN_REPO)"
+    git submodule add -f $PLUGIN_REPO $(plugin_location $PLUGIN_REPO)
 
     read -p "Commit new plugin? (y/n)" -n 1 -r
     echo ""
 
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-      #git add .
-      #git commit -m "[VIM] Adding new plugin: $(plugin_name $PLUGIN_REPO)"
-      echo "[VIM] Adding new plugin: $(plugin_name $PLUGIN_REPO)"
-      #git push origin master
+      git add .
+      git commit -m "[VIM] Adding new plugin: $(plugin_name $PLUGIN_REPO)"
     fi
   else
     echo "You forgot the plugin url."

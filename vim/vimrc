@@ -7,7 +7,7 @@ set nocompatible
 
 "Show line numbers
 set number
-"
+
 ""Enable syntax highlighting
 syntax on
 
@@ -47,21 +47,21 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
-"
+
 ""==================================================================================================
 "RULER
 ""==================================================================================================
 
 "Enable ruler
 set ruler
-"
+
 ""Format ruler to show current date and time
 set rulerformat=%55(%{strftime('%d-%m-%Y\ %H:%M:%S\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 
 "==================================================================================================
 ""COLUMN DELIMITER
 "==================================================================================================
-"
+
 ""Column limit to 100
 set cc=100
 
@@ -74,7 +74,7 @@ match OverLength /\%101v.\+/
 "==================================================================================================
 ""CTRL P and NERDTREE
 "==================================================================================================
-"
+
 ""Enable NERDTree to show hidden files and folders
 let NERDTreeShowHidden = 1
 
@@ -92,3 +92,20 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 "Set ctrlp to ignore some undesired files and folders
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+
+"==================================================================================================
+
+"==================================================================================================
+""CTRL P and NERDTREE
+"==================================================================================================
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_javascript_checkers = ['eslint']
+
+silent! nmap <F9> :SyntasticCheck<CR>
+"==================================================================================================
