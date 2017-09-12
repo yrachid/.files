@@ -12,13 +12,14 @@ set number
 syntax on
 
 "Let Vim guess file types, adjust auto-indenting accordingly and enable plugins that are file-type
-"" specific.
+" specific.
 filetype indent plugin on
 
 "A color scheme that does not burn the eyes so much.
 colorscheme desert
 
-set textwidth=100
+"Add matchit plugin
+packadd! matchit
 
 ""==================================================================================================
 "PATHOGEN
@@ -62,14 +63,16 @@ set rulerformat=%55(%{strftime('%d-%m-%Y\ %H:%M:%S\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 ""COLUMN DELIMITER
 "==================================================================================================
 
-""Column limit to 100
-set cc=100
+set textwidth=140
+
+""Column limit to 140
+set cc=140
 
 "Higlights pieces of line that match overlength regex
 highlight OverLength ctermbg=cyan ctermfg=black guibg=#C92D2D
 "
 ""Create regex pattern for column overlength when line reachs column 101
-match OverLength /\%101v.\+/
+match OverLength /\%141v.\+/
 
 "==================================================================================================
 ""CTRL P and NERDTREE
@@ -96,7 +99,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 "==================================================================================================
 
 "==================================================================================================
-""CTRL P and NERDTREE
+"" Syntastic
 "==================================================================================================
 
 set statusline+=%#warningmsg#
