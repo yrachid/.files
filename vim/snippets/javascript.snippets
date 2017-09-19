@@ -16,6 +16,9 @@ snippet desc
 	})
 snippet f
 	(${1}) => 
+snippet ff
+	(${1}) => {
+	}
 snippet cf
 	const ${1} = () => ''
 snippet m
@@ -24,3 +27,17 @@ snippet ed
 	export default ${1}
 snippet ao
 	(${1}) => ({})
+snippet then
+	then((${1}) => {
+	})
+snippet catch
+	catch((error) => {
+	})
+snippet expect
+	expect(${1}).to.
+snippet calledW
+	expect(${1}).to.have.been.calledWith()
+snippet beforeE
+	beforeEach(() => {
+	  ${1}
+	})
