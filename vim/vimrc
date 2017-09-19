@@ -21,6 +21,10 @@ colorscheme desert
 "Add matchit plugin
 packadd! matchit
 
+"Add shortcut for vnew and new
+silent! nmap <F7> :vnew<CR>
+silent! nmap <F8> :new<CR>
+
 ""==================================================================================================
 "PATHOGEN
 ""==================================================================================================
