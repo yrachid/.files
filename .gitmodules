@@ -34,3 +34,6 @@
 [submodule "vim/bundle/auto-pairs"]
 	path = vim/bundle/auto-pairs
 	url = git://github.com/jiangmiao/auto-pairs.git
+[submodule "vim/bundle/vim-elixir"]
+	path = vim/bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
