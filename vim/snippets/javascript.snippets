@@ -45,3 +45,13 @@ snippet afterE
 	afterEach(() => {
 	  ${1}
 	})
+
+snippet test
+	test('${1}', t => {
+
+	})
+
+snippet ava
+	const test = require('ava')
+snippet inspect
+	console.log(require('util').inspect(${1}, {showHidden: true, depth: null}))
