@@ -16,7 +16,7 @@ syntax on
 filetype indent plugin on
 
 "A color scheme that does not burn the eyes so much.
-colorscheme desert
+"colorscheme desert
 
 "Add matchit plugin
 packadd! matchit
@@ -24,6 +24,9 @@ packadd! matchit
 "Add shortcut for vnew and new
 silent! nmap <F7> :vnew<CR>
 silent! nmap <F8> :new<CR>
+
+set background=dark
+set t_Co=256
 
 ""==================================================================================================
 "PATHOGEN
