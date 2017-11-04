@@ -16,7 +16,7 @@ syntax on
 filetype indent plugin on
 
 "A color scheme that does not burn the eyes so much.
-"colorscheme desert
+colorscheme farout
 
 "Add matchit plugin
 packadd! matchit
@@ -102,20 +102,3 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 "Set ctrlp to ignore some undesired files and folders
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
-
-"==================================================================================================
-
-"==================================================================================================
-"" Syntastic
-"==================================================================================================
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_javascript_checkers = ['eslint']
-
-silent! nmap <F9> :SyntasticCheck<CR>
-"==================================================================================================
