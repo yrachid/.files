@@ -13,12 +13,12 @@ case $SHELL_TYPE in
     ;;
 
   bash)
-    ln -s $HOME/.othman853/bashrc ~/.bashrc
+    echo "source $HOME/.othman853/bashrc" >> ~/.bashrc
     install_vim
   ;;
 
   zsh)
-    ln -s $HOME/.othman853/zshrc ~/.zshrc
+    echo "source $HOME/.othman853/zshrc" >> ~/.zshrc
     install_vim
   ;;
 
