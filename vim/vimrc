@@ -16,7 +16,7 @@ syntax on
 filetype indent plugin on
 
 "A color scheme that does not burn the eyes so much.
-colorscheme phosphor
+colorscheme farout
 
 "Add matchit plugin
 packadd! matchit
