@@ -5,6 +5,8 @@
 ""Disable -C flag and reset system wide configuration. Better safe than sorry.
 set nocompatible
 
+let g:rainbow_active = 1
+
 "Show line numbers
 set number
 
