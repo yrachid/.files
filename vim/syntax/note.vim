@@ -6,7 +6,7 @@ syn match noteTitle '^\([A-Za-z0-9]\+\s\=\)\+$'
 
 syn match noteSeparator '=.*$'
 
-syn match noteClarification '\([A-Za-z0-9]\+\s\=\)\+:\n'
+syn match noteClarification '\([A-Za-z0-9'()!?\.]\+\s\=\)\+:\n'
 
 syn match noteArrow '=>.*$'
 
