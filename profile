@@ -1,6 +1,6 @@
-export PATH="$HOME/.jenv/bin:$PATH"
+# export PATH="$HOME/.jenv/bin:$PATH"
 
-eval "$(jenv init -)"
+# eval "$(jenv init -)"
 
 source ~/.othman853/alias
 source ~/.othman853/private

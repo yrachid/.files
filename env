@@ -5,8 +5,12 @@ export HISTFILE=$HOME/.zsh_history
 export GPG_TTY=$(tty)
 
 SCRIPTS_PATH=$HOME/.othman853/scripts
+TOOLS_PATH=$HOME/tools/bin
 
 if [[ ! ":$PATH:" == *":$SCRIPTS_PATH:"* ]]; then
   export PATH="$PATH:$SCRIPTS_PATH"
 fi
 
+if [[ ! ":$PATH:" == *":$TOOLS_PATH:"* ]]; then
+  export PATH="$PATH:$TOOLS_PATH"
+fi

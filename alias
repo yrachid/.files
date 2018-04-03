@@ -7,8 +7,6 @@ alias ws="cd ~/wspace"
 alias gs="git status"
 alias gl="git log"
 alias keys="gpg --list-secret-keys --keyid-format LONG"
-alias t="todolist"
-alias tl="todolist l by p"
 
 alias tls="tmux ls"
 
