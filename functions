@@ -22,3 +22,8 @@ colours() {
     printf "\x1b[38;5;${i}mcolour${i}\x1b[0m\n"
   done
 }
+
+ghub() {
+  git config user.name "othman853"
+  git config user.email "anuar.yasser@gmail.com"
+}
