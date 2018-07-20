@@ -22,4 +22,11 @@ function _makefile_targets {
     COMPREPLY=( $(compgen -W "${targets[@]}" -- $curr_arg )  );
 
 }
+
+PLATFORM=$(uname)
+
+if [ "$PLATFORM" = "Darwin" ]; then
+  . $HOME/.othman853/git-completion.sh
+fi
+
 complete -F _makefile_targets make
