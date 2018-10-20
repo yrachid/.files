@@ -104,3 +104,14 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 "Set ctrlp to ignore some undesired files and folders
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+
+let g:user_emmet_leader_key='<Tab>'
+
+"Bind keystroke to remove trailing whitespace
+silent! nmap <C-L> :%s/\s\+$//
+
+"Set EJS filetype to html, so that matchit plugin applies to ejs as well
+augroup ejs_ft
+  au!
+  autocmd BufNewFile,BufRead *.ejs set filetype=html
+augroup END
