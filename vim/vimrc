@@ -4,6 +4,7 @@
 
 ""Disable -C flag and reset system wide configuration. Better safe than sorry.
 set nocompatible
+set splitright
 
 let g:rainbow_active = 1
 
