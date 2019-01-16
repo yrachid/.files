@@ -24,6 +24,6 @@ colours() {
 }
 
 ghub() {
-  git config user.name "othman853"
+  git config user.name "yrachid"
   git config user.email "anuar.yasser@gmail.com"
 }
