@@ -55,6 +55,6 @@
 [submodule "vim/bundle/editorconfig-vim"]
 	path = vim/bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "vim-projectionist"]
-	path = vim-projectionist
+[submodule "vim/bundle/vim-projectionist"]
+	path = vim/bundle/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist.git
