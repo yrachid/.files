@@ -2,6 +2,9 @@
 ""GENERAL CONFIG
 "==================================================================================================
 
+"" Enable external vimrc configuraton
+set exrc
+
 ""Disable -C flag and reset system wide configuration. Better safe than sorry.
 set nocompatible
 set splitright
@@ -19,7 +22,7 @@ syntax on
 filetype indent plugin on
 
 "A color scheme that does not burn the eyes so much.
-colorscheme farout
+colorscheme desert
 
 "Add matchit plugin
 packadd! matchit
@@ -85,7 +88,7 @@ highlight OverLength ctermbg=cyan ctermfg=black guibg=#C92D2D
 match OverLength /\%141v.\+/
 
 "==================================================================================================
-""CTRL P and NERDTREE
+" CTRL P and NERDTREE
 "==================================================================================================
 
 ""Enable NERDTree to show hidden files and folders
@@ -93,13 +96,13 @@ let NERDTreeShowHidden = 1
 
 "Enable ctrlp to find hidden files and folders
 let g:ctrlp_show_hidden = 1
-"
+
 ""Allow ctrlp to be invoked with CTRL + P
 let g:ctrlp_map = '<c-p>'
 
 "Map ctrl + [ to toggle nerdtree
 silent! nmap <F3> :NERDTreeToggle<CR>
-"
+
 ""Set ctrlp on vim's runpath
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -108,11 +111,21 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 
 let g:user_emmet_leader_key='<Tab>'
 
-"Bind keystroke to remove trailing whitespace
-silent! nmap <C-L> :%s/\s\+$//
-
 "Set EJS filetype to html, so that matchit plugin applies to ejs as well
 augroup ejs_ft
   au!
   autocmd BufNewFile,BufRead *.ejs set filetype=html
 augroup END
+
+"==================================================================================================
+" Ale
+"==================================================================================================
+
+let g:ale_fixers = {
+\  '*': ['remove_trailing_spaces', 'trim_whitespace'],
+\  'javascript': ['eslint'],
+\}
+
+let g:ale_completion_enabled = 1
+
+silent! nmap <C-L> :ALEFix
