@@ -22,7 +22,8 @@ syntax on
 filetype indent plugin on
 
 "A color scheme that does not burn the eyes so much.
-colorscheme desert
+syntax enable
+colorscheme monokai
 
 "Add matchit plugin
 packadd! matchit
@@ -101,7 +102,7 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_map = '<c-p>'
 
 "Map ctrl + [ to toggle nerdtree
-silent! nmap <F3> :NERDTreeToggle<CR>
+silent! nmap <F3> :NERDTreeFind<CR>
 
 ""Set ctrlp on vim's runpath
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -129,3 +130,5 @@ let g:ale_fixers = {
 let g:ale_completion_enabled = 1
 
 silent! nmap <C-L> :ALEFix
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
