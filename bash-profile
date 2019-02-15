@@ -1,3 +1,4 @@
+. $HOME/.othman853/password-store-completion.sh
 . $HOME/.othman853/git-prompt.sh
 
 export GIT_PS1_SHOWDIRTYSTATE=1
