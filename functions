@@ -27,3 +27,11 @@ ghub() {
   git config user.name "yrachid"
   git config user.email "anuar.yasser@gmail.com"
 }
+
+gpg_reset() {
+  gpgconf --kill gpg-agent
+}
+
+weather() {
+  curl wttr.in/${1:-"POA"}
+}
