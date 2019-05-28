@@ -9,7 +9,7 @@ Apply my terminal emulator and VIM settings as smoothly as possible regardless o
 ## Installing
 
 ``` bash
-git clone https://github.com/othman853/dotfiles.git ~/.othman853
+git clone https://github.com/yrachid/dotfiles.git ~/.othman853
 
 bash install.sh
 ```
