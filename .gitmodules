@@ -58,3 +58,6 @@
 [submodule "vim/bundle/vim-projectionist"]
 	path = vim/bundle/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist.git
+[submodule "vim/bundle/vim-todo-lists"]
+	path = vim/bundle/vim-todo-lists
+	url = https://github.com/aserebryakov/vim-todo-lists.git

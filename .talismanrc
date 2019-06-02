@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: vim/bundle/vim-todo-lists
+  checksum: 62fa9d33af074e8ef9d377b601e94ea59af80443d811ba90a8edbd1bc81670f8
+  ignore_detectors: []
