@@ -10,5 +10,5 @@ let g:ctrlp_map = '<c-p>'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 "Set ctrlp to ignore some undesired files and folders
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/.venv/*
 
