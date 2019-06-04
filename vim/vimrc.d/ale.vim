@@ -4,7 +4,11 @@
 
 let g:ale_fixers = {
 \  '*': ['remove_trailing_spaces', 'trim_whitespace'],
-\  'javascript': ['eslint'],
+\  'javascript': ['eslint']
+\}
+
+let g:ale_linters = {
+\  'python': ['flake8']
 \}
 
 let g:ale_completion_enabled = 1
