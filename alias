@@ -14,4 +14,5 @@ alias did="vim +'normal Go' +'r!date' ~/did.txt"
 
 alias wimm="vim +'normal Go' +'r!date' ~/wimm.txt"
 
-alias tbflip="echo '(╯°□°）╯︵ ┻━┻)'"
+alias tbflip="echo '(ノಠ益ಠ)ノ彡┻━┻'"
+
