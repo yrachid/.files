@@ -1,4 +1,3 @@
-
 alias sl="ls -G"
 alias ll="ls -laG"
 alias l="ls -lG"
@@ -8,11 +7,6 @@ alias gs="git status"
 alias keys="gpg --list-secret-keys --keyid-format LONG"
 
 alias tls="tmux ls"
-
-# https://theptrk.com/2018/07/11/did-txt-file/
-alias did="vim +'normal Go' +'r!date' ~/did.txt"
-
-alias wimm="vim +'normal Go' +'r!date' ~/wimm.txt"
 
 alias tbflip="echo '(ノಠ益ಠ)ノ彡┻━┻'"
 alias shrug="echo '¯\_(ツ)_/¯'"

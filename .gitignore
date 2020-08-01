@@ -1,5 +1,5 @@
 *.swp
 privates/
-private
+rc.d/private
 notes
 .vim/.netrwhist
