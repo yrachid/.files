@@ -17,7 +17,7 @@ plugin_location() {
 
 install_plugin() {
   if [ ! -z "$1"  ]; then
-    cd $HOME/.othman853
+    cd $HOME/.files
 
     PLUGIN_REPO=$1
 
@@ -38,7 +38,7 @@ install_plugin() {
 remove_plugin() {
   if [ ! -z "$1" ];then
 
-    cd $HOME/.othman853/
+    cd $HOME/.files/
 
     initial_line_number=$(grep -n "\[submodule \".vim/bundle/$1\"\]" .gitmodules | cut -f1 -d: | head -n 1)
     ending_line_number=$((initial_line_number+2))

@@ -1,5 +1,5 @@
 readonly PLATFORM=$(uname)
-readonly CONFIG_PATH="$HOME/.othman853/rc.d"
+readonly CONFIG_PATH="$HOME/.files/rc.d"
 
 . "$CONFIG_PATH/aliases"
 . "$CONFIG_PATH/private"

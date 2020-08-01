@@ -4,7 +4,7 @@ export SAVEHIST=200
 export HISTFILE=$HOME/.zsh_history
 export GPG_TTY=$(tty)
 
-SCRIPTS_PATH=$HOME/.othman853/scripts
+SCRIPTS_PATH=$HOME/.files/scripts
 TOOLS_PATH=$HOME/tools/bin
 
 if [[ ! ":$PATH:" == *":$SCRIPTS_PATH:"* ]]; then
