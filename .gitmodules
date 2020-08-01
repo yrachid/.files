@@ -61,3 +61,6 @@
 [submodule "vim/bundle/vim-todo-lists"]
 	path = vim/bundle/vim-todo-lists
 	url = https://github.com/aserebryakov/vim-todo-lists.git
+[submodule "vim/bundle/vim-go"]
+	path = vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
