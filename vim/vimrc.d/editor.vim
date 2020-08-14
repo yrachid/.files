@@ -21,7 +21,7 @@ filetype indent plugin on
 
 " Sets a color scheme that does not burn the eyes so much.
 syntax enable
-colorscheme desert
+colorscheme dracula
 
 " Add matchit plugin
 packadd! matchit
