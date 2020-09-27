@@ -5,7 +5,7 @@ alias tree="tree -a -I .git"
 alias ws="cd ~/wspace"
 alias gs="git status"
 alias keys="gpg --list-secret-keys --keyid-format LONG"
-
+alias dc="docker-compose"
 alias tls="tmux ls"
 
 alias tbflip="echo '(ノಠ益ಠ)ノ彡┻━┻'"
