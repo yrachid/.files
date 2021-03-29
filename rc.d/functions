@@ -35,3 +35,22 @@ gpg_reset() {
 weather() {
   curl wttr.in/${1:-"POA"}
 }
+
+cpf() {
+  $(which python || which python3) -c "
+from random import randrange
+
+def calculate_digit(numbers):
+  numbers_length = len(numbers) + 1
+  partial_result = sum([(numbers_length - idx) * x for idx, x in enumerate(numbers)]) % 11
+  return 11 - partial_result if partial_result > 2 else 0
+
+def generate_cpf():
+  numbers = [randrange(10) for _ in range(0, 9)]
+  first_digit = calculate_digit(numbers)
+  second_digit = calculate_digit(numbers + [first_digit])
+  return map(str, numbers + [first_digit] + [second_digit])
+
+print(''.join(generate_cpf()), end='')
+"
+}
