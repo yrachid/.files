@@ -4,12 +4,14 @@
 
 let g:ale_fixers = {
 \  '*': ['remove_trailing_spaces', 'trim_whitespace'],
-\  'javascript': ['prettier']
+\  'javascript': ['prettier'],
+\  'typescript': ['prettier']
 \}
 
 let g:ale_linters = {
 \  'python': ['flake8'],
-\  'javascript': ['eslint']
+\  'javascript': ['eslint'],
+\  'typescript': ['eslint']
 \}
 
 let g:ale_linters_explicit = 1
