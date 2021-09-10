@@ -1,26 +1,27 @@
 snippet it
-	it('${1}', () => {
-	})
+	it("${1}", () => {
+	  ${2};
+	});
 snippet log
-	console.log(${1})
-snippet insp
-	console.log(require('util').inspect(${1}, { depth: null }))
+	console.log(${1});
 snippet const
-	const ${1} = 
+	const ${1} = ${2};
 snippet req
-	const ${1} = require('')
+	const ${1} = require("${2}");
 snippet import
-	import ${1} from ''
+	import ${1} from "${2}";
 snippet desc
-	describe('${1}', () => {
-	})
+	describe("${1}", () => {
+	  ${2};
+	});
 snippet f
-	(${1}) => 
+	(${1}) => ${2};
 snippet ff
 	(${1}) => {
+	  ${2};
 	}
 snippet cf
-	const ${1} = () => ''
+	const ${1} = () => ${2};
 snippet m
 	module.exports = 
 snippet ed
@@ -34,28 +35,22 @@ snippet catch
 	catch((error) => {
 	})
 snippet expect
-	expect(${1}).to.
+	expect(${1}).to${2}
 snippet calledW
 	expect(${1}).to.have.been.calledWith()
 snippet beforeE
 	beforeEach(() => {
 	  ${1}
-	})
+	});
 snippet afterE
 	afterEach(() => {
 	  ${1}
-	})
+	});
 
 snippet test
-	test('${1}', t => {
-
-	})
-
-snippet ava
-	const test = require('ava')
+	test("${1}", t => {
+	  ${2}
+	});
 
 snippet inspect
 	console.log(require('util').inspect(${1}, {showHidden: true, depth: null}))
-
-snippet import
-	import ${1} from ''
