@@ -70,3 +70,9 @@
 [submodule "vim/bundle/vim-terraform"]
 	path = vim/bundle/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "vim/bundle/vim-prettier"]
+	path = vim/bundle/vim-prettier
+	url = https://github.com/prettier/vim-prettier
+[submodule "vim/bundle/coc"]
+	path = vim/bundle/coc
+	url = https://github.com/neoclide/coc.nvim.git
