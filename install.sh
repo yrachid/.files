@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eu
 
 readonly DOTFILES_ROOT="$HOME/.files"
 readonly PRIVATE_CONFIG_FILE="$HOME/.private"
