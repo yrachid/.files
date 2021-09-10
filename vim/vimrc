@@ -9,4 +9,4 @@ runtime vimrc.d/editor.vim
 runtime vimrc.d/emmet.vim
 runtime vimrc.d/nerdtree.vim
 runtime vimrc.d/rainbow.vim
-
+runtime vimrc.d/coc.vim
