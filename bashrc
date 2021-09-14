@@ -1,13 +1,13 @@
 readonly PLATFORM=$(uname)
 readonly CONFIG_PATH="$HOME/.files/rc.d"
+readonly PRIVATE_CONFIG_FILE="$HOME/.private"
 
 . "$CONFIG_PATH/aliases"
 . "$CONFIG_PATH/env"
-. "$CONFIG_PATH/etc"
 . "$CONFIG_PATH/functions"
 . "$CONFIG_PATH/git-prompt.sh"
 . "$CONFIG_PATH/password-store-completion.sh"
-. "$CONFIG_PATH/private"
+. "$PRIVATE_CONFIG_FILE"
 
 if [ "$PLATFORM" = "Darwin" ]; then
   . "$CONFIG_PATH/git-completion.sh"
