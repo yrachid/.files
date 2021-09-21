@@ -76,3 +76,6 @@
 [submodule "vim/bundle/coc"]
 	path = vim/bundle/coc
 	url = https://github.com/neoclide/coc.nvim.git
+[submodule "vim/bundle/vim-test"]
+	path = vim/bundle/vim-test
+	url = https://github.com/vim-test/vim-test.git

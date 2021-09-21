@@ -4,9 +4,10 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 runtime vimrc.d/ale.vim
+runtime vimrc.d/coc.vim
 runtime vimrc.d/ctrlp.vim
 runtime vimrc.d/editor.vim
 runtime vimrc.d/emmet.vim
 runtime vimrc.d/nerdtree.vim
 runtime vimrc.d/rainbow.vim
-runtime vimrc.d/coc.vim
+runtime vimrc.d/vim-test.vim
