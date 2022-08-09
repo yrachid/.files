@@ -18,4 +18,5 @@ zmodload -i zsh/complist
 setopt promptsubst
 setopt inc_append_history
 
-# bindkey '^R' history-incremental-search-backward
+bindkey -e
+bindkey '^R' history-incremental-search-backward

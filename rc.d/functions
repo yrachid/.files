@@ -33,7 +33,20 @@ gpg_reset() {
 }
 
 weather() {
-  curl wttr.in/${1:-"POA"}
+  curl wttr.in/${1:-"London"}
+}
+
+linkedin() {
+  echo "
+Hi $1, how are you?
+
+Thank you so much for your interest in my profile. That sounds like an amazing opportunity! Unfortunately, I have just recently started at my current job, so I'm not looking for anything new at the moment. I would love to keep in touch for future opportunities.
+
+I have a few contacts back in Brazil that I could refer to that opportunity. If you're interested, please let me know.
+
+I hope you find the perfect candidate for the job!
+
+Thanks again!"
 }
 
 cpf() {
