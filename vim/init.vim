@@ -6,11 +6,14 @@ call plug#begin()
   Plug 'fcpg/vim-farout'
   Plug 'vim-airline/vim-airline'
   Plug 'Yggdroot/indentLine'
+  Plug 'navarasu/onedark.nvim'
 
 call plug#end()
 
+source ~/.files/vim/vimrc.d/keymap.vim
 source ~/.files/vim/vimrc.d/editor.vim
 source ~/.files/vim/vimrc.d/nerdtree.vim
 source ~/.files/vim/vimrc.d/coc.vim
 source ~/.files/vim/vimrc.d/ctrlp.vim
-source ~/.files/vim/vimrc.d/keymap.vim
+
+colorscheme onedark

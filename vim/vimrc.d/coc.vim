@@ -1,3 +1,5 @@
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+
 " Goto definitions and references
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -11,8 +13,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f :Prettier<CR>
 
 " Apply autofix to current line
 nmap <leader>qf  <Plug>(coc-fix-current)
