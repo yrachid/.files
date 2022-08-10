@@ -9,7 +9,6 @@ set splitright
 
 set nowrap
 
-
 " Show line numbers
 set number
 
@@ -19,25 +18,15 @@ syntax on
 " Let Vim guess file types, adjust auto-indenting accordingly and enable plugins that are file-type specific.
 filetype indent plugin on
 
-" Sets a color scheme that does not burn the eyes so much.
-syntax enable
-colorscheme farout
-
 " Add matchit plugin
 packadd! matchit
-
-" Add shortcut for vnew and new
-silent! nmap <F7> :vnew<CR>
-silent! nmap <F8> :new<CR>
 
 set background=dark
 set t_Co=256
 
-" Enable Invisibles
-set list
-
 " Configure Invisible tabs and spaces
-set listchars=tab:>-,trail:-
+set listchars=tab:>-,trail:-,precedes:·
+set list
 
 " Configure tab size
 set tabstop=2
@@ -63,5 +52,3 @@ highlight OverLength ctermbg=cyan ctermfg=black guibg=#C92D2D
 " Create regex pattern for column overlength when line reachs column 101
 match OverLength /\%141v.\+/
 
-" Replace selected text on visual mode on C-r
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>

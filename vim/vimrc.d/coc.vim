@@ -14,5 +14,11 @@ nmap <leader>rn <Plug>(coc-rename)
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
-" Apply autofid to current line
+" Apply autofix to current line
 nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Accept autocomplete suggestion when pressing CR
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+" Always enable Typescript and Prettier
+let g:coc_global_extensions = ['coc-tsserver', 'coc-prettier']
