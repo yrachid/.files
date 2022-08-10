@@ -6,8 +6,6 @@ readonly PRIVATE_CONFIG_FILE="$HOME/.private"
 . "$CONFIG_PATH/env"
 . "$CONFIG_PATH/functions"
 . "$CONFIG_PATH/git-prompt.sh"
-. "$CONFIG_PATH/password-store-completion.sh"
-. "$CONFIG_PATH/git-completion.sh"
 . "$PRIVATE_CONFIG_FILE"
 
 export GIT_PS1_SHOWDIRTYSTATE=1
@@ -20,3 +18,7 @@ setopt inc_append_history
 
 bindkey -e
 bindkey '^R' history-incremental-search-backward
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
