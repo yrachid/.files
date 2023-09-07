@@ -5,6 +5,12 @@ let mapleader = ","
 silent! nmap <F7> :vnew<CR>
 silent! nmap <F8> :new<CR>
 
+" Tab navigation
+silent! nmap <C-n> :tabnext<CR>
+silent! nmap <leader>n :tabnew<CR>
+
+nmap <F4> :set rnu!<CR>
+
 " Replace selected text on visual mode on C-r
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
