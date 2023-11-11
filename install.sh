@@ -16,7 +16,7 @@ create_file_structure() {
 configure_vim() {
   local NVIM_CONFIG_PATH="$HOME/.config/nvim"
 
-  curl -fLo "~/.vim/autoload/plug.vim" --create-dirs \
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -42,4 +42,5 @@ enable_config() {
 
 create_file_structure
 configure_vim
+configure_tmux
 enable_config
