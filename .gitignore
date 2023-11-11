@@ -3,3 +3,7 @@ privates/
 rc.d/private
 notes
 .vim/.netrwhist
+
+# These will be downloaded when running install.sh
+vim/plugged/
+vim/autoload/plug.vim

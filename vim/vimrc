@@ -1,10 +1,18 @@
+call plug#begin()
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  Plug 'fcpg/vim-farout'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'Yggdroot/indentLine'
+  Plug 'navarasu/onedark.nvim'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'wincent/terminus'
+  Plug 'dcampos/nvim-snippy'
 
-call pathogen#infect()
-
-" Set ctrlp on vim's runpath
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+call plug#end()
 
 " Sets a color scheme that does not burn the eyes so much.
 syntax enable
