@@ -13,3 +13,10 @@ snippet deftest
 	(deftest ${1}
 		(testing "${2}"
 			${3}))
+snippet testing
+	(testing "${1}"
+		(is (= ${2} ${3})))
+snippet ns
+	(ns ${1}
+		(:gen-class)
+		${2})

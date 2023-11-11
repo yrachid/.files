@@ -13,6 +13,8 @@ call plug#begin()
   Plug 'airblade/vim-gitgutter'
   Plug 'wincent/terminus'
   Plug 'dcampos/nvim-snippy'
+  Plug 'Olical/conjure'
+  Plug 'github/copilot.vim'
 
 call plug#end()
 
