@@ -3,11 +3,12 @@
 Personal config files for terminal applications and stuff.
 
 ``` bash
-cd ~
-git clone https://github.com/yrachid/.files.git
+git clone https://github.com/yrachid/.files.git ~/.files
 
-cd ./files
+cd ~/.files
 ./install.sh
+
+cd -
 ```
 
 ### Where to place particular or private configs that should not be commited
