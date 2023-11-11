@@ -42,4 +42,5 @@ enable_config() {
 
 create_file_structure
 configure_vim
-configure_tmux
+:x
+enable_config
