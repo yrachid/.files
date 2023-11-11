@@ -42,5 +42,4 @@ enable_config() {
 
 create_file_structure
 configure_vim
-:x
 enable_config
