@@ -16,7 +16,7 @@ create_file_structure() {
 configure_vim() {
   local NVIM_CONFIG_PATH="$HOME/.config/nvim"
 
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -39,8 +39,8 @@ enable_config() {
   echo "source $DOTFILES_ROOT/zshrc" > ~/.zshrc
 }
 
-
 create_file_structure
 configure_vim
 configure_tmux
 enable_config
+echo "Remember to install Tmux (^b + I) and Vim (:PlugInstall) plugins when starting them up for the first time"
