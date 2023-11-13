@@ -1,4 +1,3 @@
-readonly PLATFORM=$(uname)
 readonly CONFIG_PATH="$HOME/.files/rc.d"
 readonly PRIVATE_CONFIG_FILE="$HOME/.private"
 
