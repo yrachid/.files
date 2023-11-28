@@ -22,7 +22,7 @@ configure_vim() {
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-  rm -f "$HOME/.vim"
+  rm -rf "$HOME/.vim"
   ln -s "$DOTFILES_ROOT/vim" "$HOME/.vim"
 
   mkdir -p "$NVIM_CONFIG_PATH"
