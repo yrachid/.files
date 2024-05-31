@@ -15,6 +15,7 @@ call plug#begin()
   Plug 'dcampos/nvim-snippy'
   Plug 'Olical/conjure'
   Plug 'github/copilot.vim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
@@ -25,6 +26,7 @@ source ~/.files/vim/vimrc.d/editor.vim
 source ~/.files/vim/vimrc.d/nerdtree.vim
 source ~/.files/vim/vimrc.d/coc.vim
 source ~/.files/vim/vimrc.d/ctrlp.vim
+source ~/.files/vim/vimrc.d/nvim-tree-sitter.vim
 
 imap <expr> <Tab> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-advance)' : '<Tab>'
 imap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
