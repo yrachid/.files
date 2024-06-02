@@ -2,53 +2,32 @@ let g:gitgutter_terminal_reports_focus=0
 
 call plug#begin()
 
-  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'Olical/conjure'
+  Plug 'Yggdroot/indentLine'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'aserebryakov/vim-todo-lists'
   Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  Plug 'dcampos/nvim-snippy'
   Plug 'fcpg/vim-farout'
+  Plug 'github/copilot.vim'
+  Plug 'lervag/wiki.vim'
+  Plug 'navarasu/onedark.nvim'
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'Yggdroot/indentLine'
-  Plug 'navarasu/onedark.nvim'
-  Plug 'airblade/vim-gitgutter'
   Plug 'wincent/terminus'
-  Plug 'dcampos/nvim-snippy'
-  Plug 'Olical/conjure'
-  Plug 'github/copilot.vim'
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
-"set runtimepath+=~/.vim/snippets
-
-source ~/.files/vim/vimrc.d/keymap.vim
-source ~/.files/vim/vimrc.d/editor.vim
-source ~/.files/vim/vimrc.d/nerdtree.vim
 source ~/.files/vim/vimrc.d/coc.vim
 source ~/.files/vim/vimrc.d/ctrlp.vim
+source ~/.files/vim/vimrc.d/editor.vim
+source ~/.files/vim/vimrc.d/keymap.vim
+source ~/.files/vim/vimrc.d/nerdtree.vim
 source ~/.files/vim/vimrc.d/nvim-tree-sitter.vim
-
-imap <expr> <Tab> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-advance)' : '<Tab>'
-imap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
-smap <expr> <Tab> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<Tab>'
-smap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
-xmap <Tab> <Plug>(snippy-cut-text)
-
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-"imap <expr> <C-]> snippy#can_expand() ? '<Plug>(snippy-expand)' : '<C-]>'
-"imap <expr> <C-j> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<C-j>'
-"imap <expr> <C-k> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<C-k>'
-"smap <expr> <C-j> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<C-j>'
-"smap <expr> <C-k> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<C-k>'
+source ~/.files/vim/vimrc.d/snippy.vim
 
 colorscheme default
+
