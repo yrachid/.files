@@ -21,16 +21,6 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 " Accept autocomplete suggestion when pressing CR
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
-nnoremap <leader>K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
 " Always enable Typescript and Prettier
 let g:coc_global_extensions = ['coc-tsserver', 'coc-prettier']
 
