@@ -3,7 +3,7 @@ lua << EOF
       snippet_dirs = '~/.vim/snippets',
       mappings = {
           is = {
-              ['<Tab>'] = 'expand_or_advance',
+              ['<C-l>'] = 'expand_or_advance',
               ['<S-Tab>'] = 'previous',
           },
           nx = {
