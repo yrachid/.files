@@ -5,12 +5,13 @@ readonly PRIVATE_CONFIG_FILE="$HOME/.private"
 readonly TOOLS_PATH="$HOME/tools"
 readonly WSPACE_PATH="$HOME/wspace"
 
-create_file_structure() {
+create_folder_structure() {
   touch "$PRIVATE_CONFIG_FILE"
 
   mkdir -p "$TOOLS_PATH"
   mkdir -p "$TOOLS_PATH/bin"
   mkdir -p "$WSPACE_PATH"
+  mkdir -p "$HOME/.config"
 }
 
 configure_vim() {
@@ -29,6 +30,19 @@ configure_vim() {
   ln -s "$DOTFILES_ROOT/vim/init.vim" "$NVIM_CONFIG_PATH"
 }
 
+configure_nvim() {
+  local NVIM_CONFIG_PATH="$HOME/.config/nvim"
+
+  git submodule init
+  git submodule update
+
+  ln -s "$DOTFILES_ROOT/nvim" "$NVIM_CONFIG_PATH"
+}
+
+configure_alacritty() {
+  ln -s "$DOTFILES_ROOT/rc.d/alacritty.toml" "$HOME/.alacritty.toml"
+}
+
 configure_tmux() {
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   ln -s "$DOTFILES_ROOT/rc.d/tmux.conf" "$HOME/.tmux.conf"
@@ -39,8 +53,10 @@ enable_config() {
   echo "source $DOTFILES_ROOT/zshrc" > ~/.zshrc
 }
 
-create_file_structure
-configure_vim
+create_folder_structure
+configure_nvim
+configure_alacritty
 configure_tmux
 enable_config
-echo "Remember to install Tmux (^b + I) and Vim (:PlugInstall) plugins when starting them up for the first time"
+
+echo "Remember to install Tmux plugins (^b + I) when starting it up for the first time"
