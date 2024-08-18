@@ -10,10 +10,9 @@ readonly WSPACE_PATH="$HOME/wspace"
 create_folder_structure() {
   touch "$PRIVATE_CONFIG_FILE"
 
-  mkdir -p "$TOOLS_PATH"
+  mkdir -p "$NVIM_CONFIG_PATH"
   mkdir -p "$TOOLS_PATH/bin"
   mkdir -p "$WSPACE_PATH"
-  mkdir -p "$HOME/.config"
 }
 
 configure_vim() {
@@ -24,9 +23,8 @@ configure_vim() {
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
   rm -rf "$HOME/.vim"
-  ln -s "$DOTFILES/vim" "$HOME/.vim"
 
-  mkdir -p "$NVIM_CONFIG_PATH"
+  ln -s "$DOTFILES/vim" "$HOME/.vim"
   ln -s "$DOTFILES/vim/init.vim" "$NVIM_CONFIG_PATH"
 }
 
@@ -43,6 +41,7 @@ configure_alacritty() {
 
 configure_tmux() {
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
   ln -s "$DOTFILES_RC/tmux.conf" "$HOME/.tmux.conf"
 }
 
@@ -52,8 +51,8 @@ enable_config() {
 }
 
 create_folder_structure
-configure_nvim
 configure_alacritty
+configure_nvim
 configure_tmux
 enable_config
 
