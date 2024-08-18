@@ -1,6 +1,8 @@
 #!/bin/bash -eu
 
-readonly DOTFILES_ROOT="$HOME/.files"
+readonly DOTFILES="$HOME/.files"
+readonly DOTFILES_RC="$DOTFILES/rc.d"
+readonly NVIM_CONFIG_PATH="$HOME/.config/nvim"
 readonly PRIVATE_CONFIG_FILE="$HOME/.private"
 readonly TOOLS_PATH="$HOME/tools"
 readonly WSPACE_PATH="$HOME/wspace"
@@ -15,8 +17,6 @@ create_folder_structure() {
 }
 
 configure_vim() {
-  local NVIM_CONFIG_PATH="$HOME/.config/nvim"
-
   curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -24,33 +24,31 @@ configure_vim() {
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
   rm -rf "$HOME/.vim"
-  ln -s "$DOTFILES_ROOT/vim" "$HOME/.vim"
+  ln -s "$DOTFILES/vim" "$HOME/.vim"
 
   mkdir -p "$NVIM_CONFIG_PATH"
-  ln -s "$DOTFILES_ROOT/vim/init.vim" "$NVIM_CONFIG_PATH"
+  ln -s "$DOTFILES/vim/init.vim" "$NVIM_CONFIG_PATH"
 }
 
 configure_nvim() {
-  local NVIM_CONFIG_PATH="$HOME/.config/nvim"
-
   git submodule init
   git submodule update
 
-  ln -s "$DOTFILES_ROOT/nvim" "$NVIM_CONFIG_PATH"
+  ln -s "$DOTFILES/nvim" "$NVIM_CONFIG_PATH"
 }
 
 configure_alacritty() {
-  ln -s "$DOTFILES_ROOT/rc.d/alacritty.toml" "$HOME/.alacritty.toml"
+  ln -s "$DOTFILES_RC/alacritty.toml" "$HOME/.alacritty.toml"
 }
 
 configure_tmux() {
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-  ln -s "$DOTFILES_ROOT/rc.d/tmux.conf" "$HOME/.tmux.conf"
+  ln -s "$DOTFILES_RC/tmux.conf" "$HOME/.tmux.conf"
 }
 
 enable_config() {
-  echo "source $DOTFILES_ROOT/bashrc" > ~/.bashrc
-  echo "source $DOTFILES_ROOT/zshrc" > ~/.zshrc
+  echo "source $DOTFILES/bashrc" > ~/.bashrc
+  echo "source $DOTFILES/zshrc" > ~/.zshrc
 }
 
 create_folder_structure
