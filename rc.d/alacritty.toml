@@ -4,3 +4,7 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 [window]
 decorations = "None"
 opacity = 0.95
+
+[font]
+normal = { family = "SauceCodePro Nerd Font", style = "Regular" }
+size = 13
