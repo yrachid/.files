@@ -29,5 +29,5 @@ source ~/.files/vim/vimrc.d/nerdtree.vim
 source ~/.files/vim/vimrc.d/nvim-tree-sitter.vim
 source ~/.files/vim/vimrc.d/snippy.vim
 
-colorscheme default
+colorscheme lunaperche
 
