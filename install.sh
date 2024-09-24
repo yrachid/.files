@@ -10,7 +10,6 @@ readonly WSPACE_PATH="$HOME/wspace"
 create_folder_structure() {
   touch "$PRIVATE_CONFIG_FILE"
 
-  mkdir -p "$NVIM_CONFIG_PATH"
   mkdir -p "$TOOLS_PATH/bin"
   mkdir -p "$WSPACE_PATH"
 }
@@ -32,7 +31,7 @@ configure_nvim() {
   git submodule init
   git submodule update
 
-  ln -s "$DOTFILES/nvim" "$NVIM_CONFIG_PATH"
+  ln -s "$DOTFILES/nvim/" "$NVIM_CONFIG_PATH"
 }
 
 configure_alacritty() {
