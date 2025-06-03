@@ -4,7 +4,7 @@ TERM = "xterm-256color"
 
 [window]
 decorations = "None"
-opacity = 0.95
+opacity = 1
 
 [font]
 normal = { family = "SourceCodePro", style = "Regular" }
