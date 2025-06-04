@@ -7,5 +7,5 @@ decorations = "None"
 opacity = 1
 
 [font]
-normal = { family = "SourceCodePro", style = "Regular" }
+normal = { family = "Source Code Pro", style = "Regular" }
 size = 13
