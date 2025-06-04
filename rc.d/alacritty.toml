@@ -7,5 +7,46 @@ decorations = "None"
 opacity = 1
 
 [font]
-normal = { family = "Source Code Pro", style = "Regular" }
+normal = { family = "GohuFont 14 Nerd Font Propo", style = "Medium" }
 size = 13
+
+# FarOut Alacritty Colors
+# Default colors
+[colors.primary]
+background = '#0f0908'
+foreground = '#E0CCAE'
+
+#[colors.cursor]
+#cursor = '#E0CCAE'
+#text = '#0f0908'
+
+# Normal colors
+[colors.normal]
+black = '#0c0706'
+red = '#bf472c'
+green = '#a4896f'
+yellow = '#f2a766'
+blue = '#d47d49'
+magenta = '#8a4b53'
+cyan = '#a67458'
+white = '#F2A766'
+
+# Bright colors
+[colors.bright]
+black = '#392D2B'
+red = '#bf472c'
+green = '#a4896f'
+yellow = '#f2a766'
+blue = '#d47d49'
+magenta = '#8a4b53'
+cyan = '#a67458'
+white = '#E0CCAE'
+
+# Indexed Colors
+[[colors.indexed_colors]]
+index = 16
+color = '#ff9e64'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#df674c'
