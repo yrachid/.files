@@ -2,7 +2,7 @@
 
 readonly DOTFILES="$HOME/.files"
 readonly DOTFILES_RC="$DOTFILES/rc.d"
-readonly NVIM_CONFIG_PATH="$HOME/.config/nvim"
+readonly NVIM_CONFIG_PATH="$HOME/.config/"
 readonly PRIVATE_CONFIG_FILE="$HOME/.private"
 readonly TOOLS_PATH="$HOME/tools"
 readonly WSPACE_PATH="$HOME/wspace"
@@ -12,6 +12,7 @@ create_folder_structure() {
 
   mkdir -p "$TOOLS_PATH/bin"
   mkdir -p "$WSPACE_PATH"
+  mkdir -p "$NVIM_CONFIG_PATH"
 }
 
 configure_vim() {
