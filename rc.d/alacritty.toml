@@ -7,7 +7,8 @@ decorations = "None"
 opacity = 0.95
 
 [font]
-normal = { family = "BigBlueTermPlus Nerd Font", style = "Regular" }
+ normal = { family = "BigBlueTermPlus Nerd Font", style = "Regular" }
+# normal = { family = "0xProto Nerd Font Mono", style = "Regular" }
 size = 12
 
 [general]
