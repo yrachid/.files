@@ -6,13 +6,28 @@ For more information see:
 * https://github.com/ryanoasis/nerd-fonts/
 * https://github.com/ryanoasis/nerd-fonts/releases/latest/
 
-# 0xProto
+# Source Code Pro
 
-A programming font focused on source code legibility.
+**Source Code Pro** is a set of OpenType fonts that have been designed to work well
+in user interface (UI) environments.
 
-For more information have a look at the upstream website: https://github.com/0xType/0xProto
+For more information have a look at the upstream website: https://github.com/adobe-fonts/source-code-pro
 
-Version: 2.300
+Version: 2.042 / 1.062
+
+## Why `SauceCodePro` and not `Source Code Pro`?
+
+What's in a name? The reason for the name change is to comply with the SIL Open Font License (OFL), in particular the [Reserved Font Name mechanism][SIL-RFN]
+
+Some fonts have parts of their name "reserved" per the [Reserved Font Name mechanism][SIL-RFN]:
+> No Modified Version of the Font Software may use the Reserved Font
+> Name(s) unless explicit written permission is granted by the corresponding
+> Copyright Holder. This restriction only applies to the primary font name as
+> presented to the users.
+
+- The main goals seem to be to: `Avoid collisions`, `Protect authors`, `Minimize support`, and `Encourage derivatives`
+
+See the [Reserved Font Name section][SIL-RFN] for additional information
 
 ## Which font?
 
@@ -36,7 +51,7 @@ Once you narrow down your font choice of family (`Droid Sans`, `Inconsolata`, et
 #### `Option 1: Download already patched font`
 
  * For a stable version download a font package from the [release page](https://github.com/ryanoasis/nerd-fonts/releases)
- * Direct links for [0xProto.zip](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/0xProto.zip) or [0xProto.tar.xz](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/0xProto.tar.xz)
+ * Or download the development version from the folders here
 
 #### `Option 2: Patch your own font`
 
