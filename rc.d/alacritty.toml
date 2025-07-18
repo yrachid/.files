@@ -4,7 +4,7 @@ TERM = "xterm-256color"
 
 [window]
 decorations = "None"
-opacity = 0.95
+opacity = 1
 
 [font]
 # normal = { family = "BigBlueTermPlus Nerd Font", style = "Regular" }
@@ -13,5 +13,7 @@ size = 14
 
 [general]
 import = [
-  "~/.config/alacritty/themes/gotham.toml"
+  #"~/.config/alacritty/themes/nord.toml"
+   "~/.config/alacritty/themes/gotham.toml"
+  # "~/.config/alacritty/themes/vscode.toml"
 ]
