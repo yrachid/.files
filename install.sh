@@ -36,14 +36,9 @@ configure_nvim() {
 }
 
 configure_alacritty() {
-  local ALACRITTY_THEMES="$HOME/.config/alacritty/themes/"
+  local ALACRITTY_CONFIG_DIR="$HOME/.config/alacritty"
 
-  mkdir -p "${ALACRITTY_THEMES}"
-
-  for alacritty_theme in $DOTFILES_RC/alacritty/themes/*.toml; do
-    cp "${alacritty_theme}" "$ALACRITTY_THEMES"
-  done
-
+  ln -s "$DOTFILES_RC/alacritty/themes" "${ALACRITTY_CONFIG_DIR}"
   ln -s "$DOTFILES_RC/alacritty.toml" "$HOME/.alacritty.toml"
 }
 
